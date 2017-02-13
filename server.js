@@ -52,10 +52,9 @@ var htmltemplate =`
         </div>
         </div>
     </body>
-</html>
- `;
+    </html>
+ ;
  return htmlTemplate;
-
 }
 
 app.get('/', function (req, res) {
@@ -63,7 +62,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
- res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+res.send(createTemplate(articleone));
 });
 
 app.get('/article-two',function(req,res){
